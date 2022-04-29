@@ -1,6 +1,10 @@
-import react from 'react';
+import React from 'react';
+import { UserContext } from '../contexts/UserContext';
 
 const AboutPage = (props) => {
-    return <h2>About</h2>;
+    const value = React.useContext(UserContext); 
+    return <div>
+                <h2>About</h2><h3>{value}</h3>
+            </div>;
 }
 export default AboutPage
